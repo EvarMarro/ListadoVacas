@@ -17,9 +17,9 @@ import java.util.ArrayList;
 
 public class AdapterDatos extends BaseAdapter {
     protected Activity activity;
-    protected ArrayList<Datos> items;
+    protected ArrayList<Vaca> items;
 
-    public AdapterDatos(Activity activity, ArrayList<Datos> items){
+    public AdapterDatos(Activity activity, ArrayList<Vaca> items){
         this.activity = activity;
         this.items = items;
     }
@@ -46,13 +46,13 @@ public class AdapterDatos extends BaseAdapter {
             LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = inf.inflate(R.layout.item_lista_vacas, null);
         }
-        Datos datos = items.get(position);
+        Vaca vaca = items.get(position);
         ImageView foto = (ImageView) v.findViewById(R.id.imageView_vaca);
-        foto.setImageDrawable(datos.getFoto());
+        foto.setImageDrawable(vaca.getFoto());
         TextView nombre = (TextView) v.findViewById(R.id.textView_nombre);
-        nombre.setText(datos.getNombre());
+        nombre.setText(vaca.getNombre());
         TextView info = (TextView) v.findViewById(R.id.textView_info);
-        info.setText(datos.getInfo());
+        info.setText(vaca.getInfo());
         return v;
     }
 }

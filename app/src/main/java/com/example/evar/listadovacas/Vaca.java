@@ -6,13 +6,13 @@ import android.graphics.drawable.Drawable;
  * Created by Evar on 08/08/2017.
  */
 
-public class Datos {
+public class Vaca {
     protected Drawable foto;
     protected String nombre;
     protected String info;
     protected long id;
 
-    public Datos(Drawable foto, String nombre, String info){
+    public Vaca(Drawable foto, String nombre, String info){
         this.foto = foto;
         this.nombre = nombre;
         this.info = info;
